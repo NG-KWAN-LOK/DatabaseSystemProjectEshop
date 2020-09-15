@@ -7,6 +7,13 @@ if(is_array($_GET)&&count($_GET)>0)//先判断是否通过get传值了
     $_SESSION['Id']=$_GET["Id"];//存在
   }
 }
+$url = getenv('mysql://q6xgfvhw1hmpbnms:ywlqqv2cysnisw1z@sh4ob67ph9l80v61.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/z52ewqiptplxmpkg');
+$dbparts = parse_url($url);
+
+$hostname = $dbparts['sh4ob67ph9l80v61.cbetxkdyhwsb.us-east-1.rds.amazonaws.com'];
+$username = $dbparts['q6xgfvhw1hmpbnms'];
+$password = $dbparts['ywlqqv2cysnisw1z'];
+$database = ltrim($dbparts['qkurcgqzk3zfs0bv'],'/',['qkurcgqzk3zfs0bv']);
 include('db.php');
 
 ?>
