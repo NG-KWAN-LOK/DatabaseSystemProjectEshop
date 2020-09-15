@@ -13,7 +13,7 @@ $dbparts = parse_url($url);
 $hostname = $dbparts['sh4ob67ph9l80v61.cbetxkdyhwsb.us-east-1.rds.amazonaws.com'];
 $username = $dbparts['q6xgfvhw1hmpbnms'];
 $password = $dbparts['ywlqqv2cysnisw1z'];
-$database = ltrim($dbparts['qkurcgqzk3zfs0bv'],'/',['qkurcgqzk3zfs0bv']);
+$database = ltrim($dbparts['qkurcgqzk3zfs0bv'],'/');
 include('db.php');
 
 ?>
